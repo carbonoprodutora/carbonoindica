@@ -207,7 +207,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .mc .go{font:600 14px var(--display);color:var(--accent)}
 @media (max-width:900px){.plans,.more{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.plans,.more{grid-template-columns:1fr}}
-</style>
+a.ch{text-decoration:none;color:inherit;transition:border-color .2s,background .2s}a.ch:hover{border-color:var(--accent);background:#22282B}a.ch .go{font:600 14px var(--display);color:var(--accent)}</style>
 </head>
 <body>
 <nav class="top" aria-label="Principal">
@@ -331,9 +331,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <p class="lead">Quem entra na lista recebe o convite para o teste e a condição de fundador.</p>
     </div>
     <div class="contact">
-      <div class="ch"><span class="lbl">WhatsApp</span><span class="val">+55 61 98126-8021</span><div class="acts"><a href="https://wa.me/5561981268021?text=Ol%C3%A1!%20Quero%20entrar%20na%20lista%20da%20Carbono%20Indica." target="_blank" rel="noopener">Entrar na lista</a></div></div>
-      <div class="ch"><span class="lbl">Instagram</span><span class="val">@carbonoindica</span><div class="acts"><a href="https://www.instagram.com/carbonoindica/" target="_blank" rel="noopener">Seguir</a></div></div>
-      <div class="ch"><span class="lbl">E-mail</span><span class="val" id="mail">carbonoprodutora@gmail.com</span><div class="acts"><button type="button" id="copy">Copiar e-mail</button></div></div>
+      <a class="ch" href="https://wa.me/5561981268021?text=Ol%C3%A1!%20Quero%20entrar%20na%20lista%20da%20Carbono%20Indica." target="_blank" rel="noopener"><span class="lbl">WhatsApp</span><span class="val">Entrar na lista pelo WhatsApp</span><span class="go">Abrir →</span></a>
+      <a class="ch" href="https://www.instagram.com/carbonoindica/" target="_blank" rel="noopener"><span class="lbl">Instagram</span><span class="val">Seguir a Carbono Indica</span><span class="go">Abrir →</span></a>
+      <a class="ch" href="mailto:contato@carbonoproducao.com.br?subject=Lista%20Carbono%20Indica"><span class="lbl">E-mail</span><span class="val">Enviar um e-mail</span><span class="go">Abrir →</span></a>
     </div>
   </div>
 </section>
@@ -365,13 +365,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
 </footer>
 
-<script>
-document.getElementById('copy').addEventListener('click',function(){
-  var b=this,el=document.getElementById('mail'),t=el.textContent;
-  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado: copie com Ctrl+C';}
-  try{navigator.clipboard.writeText(t).then(function(){b.textContent='E-mail copiado';},sel);}catch(e){sel();}
-});
-</script>
 
 </body>
 </html>
